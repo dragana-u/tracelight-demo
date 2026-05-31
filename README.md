@@ -69,7 +69,8 @@ tracelight-demo/
 ├── app.py                          # Streamlit web application (UI entry point)
 ├── requirements.txt                # Python dependencies
 ├── README.md                       # This file
-├── презентација-дпнс-221043.pptx   # Presentation
+├── презентација-дпнс-221043.pptx   # Presentation pptx
+├── презентација-дпнс-221043.pdf    # Presentation pdf
 └── sketching/
     ├── __init__.py
     ├── pencil_sketch.py         # Pencil sketch effect (grayscale + color dodge)
