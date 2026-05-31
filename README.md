@@ -2,6 +2,10 @@
 
 A web demo that turns photographs into pencil sketches using classical image processing.
 
+## Demo
+
+🔗 Live Demo: https://dragana-u-tracelight-demo-app-96bhrt.streamlit.app/
+
 ---
 
 ## Quick start
