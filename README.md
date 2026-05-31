@@ -26,18 +26,6 @@ cd tracelight-demo
 
 ### 3. Create a virtual environment (recommended)
 
-**macOS / Linux:**
-```bash
-python -m venv .venv
-source .venv/bin/activate
-```
-
-**Windows (PowerShell):**
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
 **Windows (cmd):**
 ```cmd
 python -m venv .venv
@@ -78,9 +66,10 @@ To stop the server, press **Ctrl+C** in the terminal.
 
 ```
 tracelight-demo/
-├── app.py                       # Streamlit web application (UI entry point)
-├── requirements.txt             # Python dependencies
-├── README.md                    # This file
+├── app.py                          # Streamlit web application (UI entry point)
+├── requirements.txt                # Python dependencies
+├── README.md                       # This file
+├── презентација-дпнс-221043.pptx   # Presentation
 └── sketching/
     ├── __init__.py
     ├── pencil_sketch.py         # Pencil sketch effect (grayscale + color dodge)
