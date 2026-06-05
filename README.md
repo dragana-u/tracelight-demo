@@ -8,7 +8,8 @@ A web demo that turns photographs into pencil sketches using classical image pro
 
 ---
 
-## Quick start
+<details>
+<summary><strong>Quick start</strong></summary>
 
 ### 1. Requirements
 
@@ -54,9 +55,12 @@ JPEG, BMP, or WEBP) from the sidebar and the sketch appears instantly.
 
 To stop the server, press **Ctrl+C** in the terminal.
 
+</details>
+
 ---
 
-## Running in PyCharm
+<details>
+<summary><strong>Running in PyCharm</strong></summary>
 
 1. Open the project folder (`tracelight-demo`) in PyCharm.
 2. **File → Settings → Project → Python Interpreter** → add the virtual
@@ -64,9 +68,12 @@ To stop the server, press **Ctrl+C** in the terminal.
 3. Open the terminal inside PyCharm (`Alt + F12`) and run
    `streamlit run app.py`. PyCharm will detect the running server.
 
+</details>
+
 ---
 
-## Project structure
+<details>
+<summary><strong>Project structure</strong></summary>
 
 ```
 tracelight-demo/
@@ -82,9 +89,12 @@ tracelight-demo/
     └── hatching.py              # Directional hatching (gradient-aligned strokes)
 ```
 
+</details>
+
 ---
 
-## Dependencies
+<details>
+<summary><strong>Dependencies</strong></summary>
 
 | Package | Version | Purpose |
 |---|---|---|
@@ -93,13 +103,16 @@ tracelight-demo/
 | `numpy` | ≥ 1.26.0 | Array arithmetic |
 | `matplotlib` | ≥ 3.8.0 | Pipeline visualization and histograms |
 
+</details>
+
 ---
 
 # Implementation reference
 
 ---
 
-## Module: `sketching/pencil_sketch.py`
+<details>
+<summary><strong>Module: <code>sketching/pencil_sketch.py</code></strong></summary>
 
 Contains the full pencil sketch algorithm, broken into individual steps so each
 intermediate result can be captured and displayed in the pipeline view.
@@ -290,9 +303,12 @@ Dictionary with keys:
 | `"blurred"` | `(H, W) uint8` | After `gaussian_blur` |
 | `"sketch"` | `(H, W) uint8` | Final pencil sketch |
 
+</details>
+
 ---
 
-## Module: `sketching/edge_detection.py`
+<details>
+<summary><strong>Module: <code>sketching/edge_detection.py</code></strong></summary>
 
 Implements three classical edge detection algorithms — **Sobel**, **Laplacian**,
 and **Canny**, sharing a common preprocessing pipeline (grayscale conversion
@@ -461,9 +477,12 @@ Sobel additionally returns `"grad_x"`, `"grad_y"`, and `"ksize"`.
 Laplacian additionally returns `"ksize"`.
 Canny additionally returns `"low"` and `"high"`.
 
+</details>
+
 ---
 
-## Module: `sketching/hatching.py`
+<details>
+<summary><strong>Module: <code>sketching/hatching.py</code></strong></summary>
 
 Implements **directional hatching** — a sketching effect where the strokes
 follow the local edge orientation. It builds directly on the Sobel operator
@@ -635,9 +654,12 @@ Dictionary with keys:
 | `"hatched"` | `(H, W) uint8` | Final hatched sketch |
 | `"n_bins"`, `"spacing"`, `"threshold"`, `"smoothing"` | int | Echo of the params for the UI |
 
+</details>
+
 ---
 
-## Application: `app.py`
+<details>
+<summary><strong>Application: <code>app.py</code></strong></summary>
 
 The Streamlit application. It is the single entry point — run with
 `streamlit run app.py`.
@@ -766,11 +788,12 @@ compared to the broader grayscale distribution.
 Both figures are closed with `plt.close()` immediately after rendering to
 release memory.
 
----
+</details>
 
 ---
 
-## Algorithm Summary
+<details>
+<summary><strong>Algorithm Summary</strong></summary>
 
 ### Pencil sketch
 
@@ -900,3 +923,5 @@ Input: BGR image
   ▼
 Output: Hatched sketch (H, W) uint8
 ```
+
+</details>
